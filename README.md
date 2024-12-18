@@ -116,15 +116,10 @@ frontend/
 ### Backend
 ```
 backend/
-├── models/
-│   ├── Pokemon.js
 ├── routes/
-│   ├── pokemonRoutes.js
+│   ├── pokemon.js
 ├── controllers/
 │   ├── pokemonController.js
-├── config/
-│   ├── db.js
-├── app.js
 ├── server.js
 ```
 
@@ -146,9 +141,6 @@ http://localhost:5100/api/pokemon
          "id": 1,
          "name": "Bulbasaur",
          "image": "<image_url>",
-         "base_experience": 64,
-         "height": 7,
-         "weight": 69
        }
      ]
      ```
