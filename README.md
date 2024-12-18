@@ -70,7 +70,6 @@ The Pokémon App is a simple React-Redux application that interacts with a backe
 3. Create a `.env` file in the `backend` directory and add the following variables:
    ```env
    PORT=5100
-   MONGO_URI=<your_mongodb_connection_string>
    ```
 
 4. Start the backend server:
