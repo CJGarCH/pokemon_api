@@ -1,3 +1,4 @@
+/* General App Styling */
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -12,7 +13,7 @@ h1 {
   font-size: 2rem;
 }
 
-/* Search bar container */
+/* Search Bar Styling */
 .search-bar {
   margin-bottom: 20px;
   width: 100%;
@@ -22,24 +23,24 @@ h1 {
 .search-bar input {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
+  font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-/* Pokémon grid */
+/* Pokémon Grid */
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamically adjust column count */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic columns */
   gap: 20px; /* Space between cards */
   padding: 16px;
-  width: 100%; /* Ensure grid takes up full width */
-  max-width: 1200px; /* Optional: Constrain the grid width */
-  margin: 0 auto; /* Center the grid container horizontally */
-  justify-items: center; /* Ensure cards are centered in their grid cells */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center grid container horizontally */
+  justify-items: center; /* Center cards within their grid cells */
 }
 
-
+/* Pokémon Card Styling */
 .pokemon-card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -48,14 +49,14 @@ h1 {
   text-align: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   cursor: pointer;
-  width: 100%; /* Ensure the card fits its container */
-  max-width: 150px; /* Prevent cards from growing too large */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visuals */
+  width: 100%; /* Fit container */
+  max-width: 150px; /* Prevent oversized cards */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .pokemon-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Add a stronger shadow on hover */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
 }
 
 .pokemon-card img {
@@ -65,93 +66,13 @@ h1 {
 }
 
 .pokemon-card p {
-  font-size: 14px;
+  font-size: 0.875rem; /* Relative font size */
   font-weight: bold;
   text-transform: capitalize;
   margin: 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .pokemon-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust column size for tablets */
-    gap: 16px; /* Adjust spacing */
-  }
-
-  .pokemon-card {
-    max-width: 120px; /* Reduce card size for tablets */
-    padding: 12px;
-  }
-
-  .pokemon-card img {
-    width: 80px;
-    height: 80px; /* Smaller image size */
-  }
-
-  .pokemon-card p {
-    font-size: 12px; /* Smaller text size */
-  }
-}
-
-@media (max-width: 480px) {
-  .pokemon-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust column size for mobile */
-    gap: 10px;
-  }
-
-  .pokemon-card {
-    max-width: 100px; /* Smaller card size for mobile */
-    padding: 10px;
-  }
-
-  .pokemon-card img {
-    width: 70px;
-    height: 70px; /* Smaller image size for mobile */
-  }
-
-  .pokemon-card p {
-    font-size: 10px; /* Smaller text size for mobile */
-  }
-}
-
-/* Modal styling */
-.modal {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 400px;
-  margin: auto;
-  text-align: center;
-}
-
-.overlay {
-  background: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-}
-
-.pokemon-detail img {
-  width: 150px;
-  height: 150px;
-  margin: 20px 0;
-}
-
-.pokemon-detail button.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
+/* Modal Styling */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -165,34 +86,89 @@ h1 {
 }
 
 .modal-content {
-  position: relative; /* Ensures the close button is positioned relative to this element */
+  position: relative;
   background: white;
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
+  width: 90%;
   max-width: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .close-button {
-  background: red; /* Red color */
+  background: red;
   color: white;
   border: none;
-  border-radius: 1%;
-  font-size: 18px;
-  width: 60px;
-  height: 40px;
+  font-size: 1rem;
   cursor: pointer;
   position: absolute;
-  bottom: 6px; /* Places the button outside the modal */
-  right: 5px; /* Adjust for horizontal offset */
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease;
 }
 
 .close-button:hover {
-  background: #d32f2f; /* Darker red on hover */
+  background: #d32f2f;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Scale down header font size */
+  }
+
+  .pokemon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller columns for tablets */
+    gap: 16px;
+  }
+
+  .pokemon-card {
+    max-width: 120px; /* Smaller card size for tablets */
+    padding: 12px;
+  }
+
+  .pokemon-card img {
+    width: 80px;
+    height: 80px; /* Smaller image size */
+  }
+
+  .pokemon-card p {
+    font-size: 0.75rem; /* Adjust text size */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.25rem; /* Further reduce header font size */
+  }
+
+  .pokemon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust for mobile */
+    gap: 10px;
+  }
+
+  .pokemon-card {
+    max-width: 100px; /* Reduce card size further */
+    padding: 10px;
+  }
+
+  .pokemon-card img {
+    width: 70px;
+    height: 70px; /* Smaller image for mobile */
+  }
+
+  .pokemon-card p {
+    font-size: 0.625rem; /* Smallest readable font size */
+  }
+
+  .modal-content {
+    padding: 16px; /* Adjust padding for smaller screens */
+    width: 95%; /* Maximize usage of smaller screen width */
+  }
 }
